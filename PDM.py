@@ -23,10 +23,10 @@ if y == 3:
 #counting the salary
 if x >= 20:
     result = 110000 * 20
-    result = result + result*percent/100 + 3800000
+    result = result + 3800000*percent/100 + 3800000
 if x < 20:
     result = 110000 * x
-    result = result + result*percent/100 + 3800000
+    result = result + 3800000*percent/100 + 3800000
 
 def group(number):#Adding zero for Thousands
     s = '%d' % number
