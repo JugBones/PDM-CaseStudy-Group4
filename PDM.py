@@ -4,12 +4,12 @@ def calculate_salary():
     #inputing the numbers
     while x<=0:
         x = int(input("input number of overtime: "))
-        if x > 0:
+        if x > 0 and x<=20:
             break
         print("Should be a positive Integer")
     while y<=0:    
         y = int(input("input level of allowance: "))
-        if y > 0:
+        if y > 0 and y<=3:
             break
         print("Should be a positive Integer")
 
@@ -22,10 +22,9 @@ def calculate_salary():
         percent = 15
 
     #counting the salary
-    if x >= 20:
-        result = 110000 * 20
-        result = result + 3800000*percent/100 + 3800000
-    if x < 20:
+
+
+    
         result = 110000 * x
         result = result + 3800000*percent/100 + 3800000
 
