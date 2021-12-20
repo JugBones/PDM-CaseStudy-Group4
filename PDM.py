@@ -4,9 +4,9 @@ def calculate_salary():
     #inputing the numbers
     while x<=0:
         x = int(input("input number of overtime: "))
-        if x > 0 and x<=20:
+        if x >= 0 and x<=20:
             break
-        print("Should be an integer between 0 and 21")
+        print("Should be a positive integer below 21")
     while y<=0:    
         y = int(input("input level of allowance: "))
         if y > 0 and y<=3:
