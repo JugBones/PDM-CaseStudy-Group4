@@ -23,10 +23,10 @@ def calculate_salary():
 
     #counting the salary
 
-
-
-        result = 110000 * x
-        result = result + 3800000*percent/100 + 3800000
+    result = 0
+    if x>0:
+         result = 110000 * x
+    result = result + 3800000*percent/100 + 3800000
 
     def group(number):#Adding zero for Thousands
         s = '%d' % number
