@@ -22,7 +22,7 @@ def calculate_salary():
         percent = 15
 
     #counting the salary
-
+    overtimePay = 0
     result = 0
     if x>0:
          overtimePay = 110000 * x
