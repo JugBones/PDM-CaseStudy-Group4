@@ -3,15 +3,24 @@ def calculate_salary():
     y = 0
     #inputing the numbers
     while x<0 or x>20:
-        x = int(input("Input the number of overtime hours: "))
+        try:
+         x = int(input("Input the number of overtime hours: "))
+        except ValueError:
+            print("Input only accepts integer")
+
         if x >= 0 and x<=20:
             break
-        print("Should be a positive integer below 21")
+        else:
+         print("Should be a positive integer below 21")
     while y<=0 or y>3:
-        y = int(input("Input the level of allowance: "))
+        try:
+         y = int(input("Input the level of allowance: "))
+        except ValueError:
+            print("Input only accepts integer")
         if y > 0 and y<=3:
             break
-        print("Should be an integer between 0 and 4")
+        else:
+         print("Should be an integer between 0 and 4")
     basic = 3800000
     #finding how many percent
     if y == 1:
