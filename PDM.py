@@ -3,12 +3,12 @@ def calculate_salary():
     y = 0
     #inputing the numbers
     while x<=0:
-        x = int(input("input number of overtime: "))
+        x = int(input("Input the number of overtime hours: "))
         if x >= 0 and x<=20:
             break
         print("Should be a positive integer below 21")
     while y<=0:    
-        y = int(input("input level of allowance: "))
+        y = int(input("Input the level of allowance: "))
         if y > 0 and y<=3:
             break
         print("Should be an integer between 0 and 4")
@@ -25,8 +25,10 @@ def calculate_salary():
 
     result = 0
     if x>0:
-         result = 110000 * x
-    result = result + 3800000*percent/100 + 3800000
+         overtimePay = 110000 * x
+         result += overtimePay
+    allowance =3800000*percent/100
+    result = result + allowance + 3800000
 
     def group(number):#Adding zero for Thousands
         s = '%d' % number
@@ -35,8 +37,12 @@ def calculate_salary():
             groups.append(s[-3:])
             s = s[:-3]
         return s + '.'.join(reversed(groups))
-
+    print("------------------------------------------")
+    print("Overtime Pay: {}".format(group(overtimePay)))
+    print("Basic Salary: {}".format(group(3800000)))
+    print("Allowance: {}".format(group(allowance)))
     print("Total Salary: {}".format(group(result)))
+    print("------------------------------------------")
 
 if __name__ == '__main__':
     calculate_salary()
