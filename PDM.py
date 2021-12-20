@@ -12,7 +12,7 @@ def calculate_salary():
         if y > 0 and y<=3:
             break
         print("Should be an integer between 0 and 4")
-
+    basic = 3800000
     #finding how many percent
     if y == 1:
         percent = 5
@@ -27,8 +27,8 @@ def calculate_salary():
     if x>0:
          overtimePay = 110000 * x
          result += overtimePay
-    allowance =3800000*percent/100
-    result = result + allowance + 3800000
+    allowance =basic*percent/100
+    result = result + allowance + basic
 
     def group(number):#Adding zero for Thousands
         s = '%d' % number
@@ -39,7 +39,7 @@ def calculate_salary():
         return s + '.'.join(reversed(groups))
     print("________________________")
     print("Overtime Pay: {}".format(group(overtimePay)))
-    print("Basic Salary: {}".format(group(3800000)))
+    print("Basic Salary: {}".format(group(basic)))
     print("Allowance: {}".format(group(allowance)))
     print("________________________")
     print("Total Salary: {}".format(group(result)))
